@@ -4,7 +4,7 @@
   "description": "Sistema Saas de uso da gestão e controle operacinal das fazendas de grãos.",
   "main": "server.js",
   "scripts": {
-    "dev": "node . --watch",
+    "dev": "node --watch server.js",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write "
   },
@@ -13,7 +13,9 @@
   "type": "module",
   "dependencies": {
     "@prisma/client": "^5.21.1",
-    "express": "^4.21.1"
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
