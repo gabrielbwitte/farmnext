@@ -11,4 +11,6 @@ app.use(express.json());
 app.use("/", publicRoutes);
 app.use("/", auth, privateRoutes);
 
-app.listen(433, () => console.log("Servidor rodando..."));
+const port = app.address().port;
+
+app.listen(port, () => console.log(`Servidor rodando na porta: ${port}`));
