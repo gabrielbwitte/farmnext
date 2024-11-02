@@ -27,13 +27,4 @@ jobs:
           source: "."
           target: "/apiFarmnext"
 
-      - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT }}
-          script: |
-            npm install
-            npm run start
+      
