@@ -4,6 +4,7 @@
   "description": "Sistema Saas de uso da gestão e controle operacinal das fazendas de grãos.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "dev": "node --watch server.js",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write "
