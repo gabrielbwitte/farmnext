@@ -11,6 +11,6 @@ app.use(express.json());
 app.use("/", publicRoutes);
 app.use("/", auth, privateRoutes);
 
-const port = 3000;
+const port = 1000;
 
 app.listen(port, () => console.log(`Servidor rodando na porta: ${port}`));
