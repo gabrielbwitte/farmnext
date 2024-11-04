@@ -11,12 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Using Node.js
-        uses: actions/setup-node@v2
-      - name: pm2 restart
-        run: |
-          pm2 restart apifn
+      - name: Checkout do repositorio
+        uses: actions/checkout@v1
+      - name: Deploy para hostinger
+        uses: easingthemes/ssh-deploy@main
+        env: 
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzv0 --delete"
+          SOURCE: "/"
+          REMOTE_HOST: ${{ secrets.SERVER_PORT }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          REMOTE_PORT: ${{ secrets.SERVER_PORT }}
+          
     
     
 
