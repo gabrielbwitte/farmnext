@@ -23,6 +23,9 @@ jobs:
           REMOTE_USER: ${{ secrets.SERVER_USER }}
           REMOTE_PORT: ${{ secrets.SERVER_PORT }}
           TARGET: app
+          RUN: |
+            npm install
+            npm run start
           
           
           
