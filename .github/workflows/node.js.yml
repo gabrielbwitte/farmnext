@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositorio
+      - name: Checkout
         uses: actions/checkout@v1
       - name: Deploy para hostinger
         uses: easingthemes/ssh-deploy@main
@@ -25,10 +25,10 @@ jobs:
           TARGET: app
 
 
-
   build:
     name: Build
     runs-on: ubuntu-latest
+    needs: continuos-integration
     steps:
     - name: multiple command
       uses: appleboy/ssh-action@v1.1.0
