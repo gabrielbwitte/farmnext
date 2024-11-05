@@ -39,8 +39,9 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           cd app
-          sudo npm install
-          sudo npm run start
+          ls -la
+          npm install
+          npm run start
           
     
     
