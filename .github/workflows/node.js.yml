@@ -39,7 +39,8 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           cd app
-          ls -la
+          echo "npm install"
+          echo "npm run start"
           
           
     
