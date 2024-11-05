@@ -25,22 +25,7 @@ jobs:
           TARGET: app
 
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: continuos-integration
-    steps:
-    - name: multiple command
-      uses: appleboy/ssh-action@v1.1.0
-      with:
-        host: ${{ secrets.SERVER_IP }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        port: ${{ secrets.SERVER_PORT }}
-        script: |
-          cd app
-          echo "npm install"
-          echo "npm run start"
+ 
           
           
     
