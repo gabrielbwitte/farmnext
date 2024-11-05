@@ -22,6 +22,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.SERVER_PORT }}
           REMOTE_USER: ${{ secrets.SERVER_USER }}
           REMOTE_PORT: ${{ secrets.SERVER_PORT }}
+          REMOTE_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
           
     
     
