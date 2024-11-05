@@ -40,8 +40,7 @@ jobs:
         script: |
           cd app
           ls -la
-          npm install
-          npm run start
+          
           
     
     
