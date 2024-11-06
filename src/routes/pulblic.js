@@ -7,6 +7,12 @@ const prisma = new PrismaClient();
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET;
 
+//test
+router.get("/test", (req, res) => {
+  res.status(200).json({ message: "Passou no test" });
+})
+
+
 //cadastro
 router.post("/cadastro", async (req, res) => {
   try {
@@ -22,9 +28,9 @@ router.post("/cadastro", async (req, res) => {
     });
     res.status(201).json(userdb);
   } catch (error) {
-    res.status(500).json({ mesage: "erro 500" });
+    res.status(500).json({ message: "erro 500" });
   }
-  const user = req.body;
+
 });
 
 //login
@@ -53,7 +59,7 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "1d" });
 
     res.status(200).json(token);
-  } catch (error) {}
+  } catch (error) { }
 });
 
 export default router;
