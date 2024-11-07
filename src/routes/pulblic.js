@@ -28,7 +28,9 @@ router.post("/cadastro", async (req, res) => {
     });
     res.status(201).json(userdb);
   } catch (error) {
-    res.status(500).json({ message: "erro 500" });
+    res.status(500).json({ message: "erro 500",
+      error
+     });
   }
 
 });
